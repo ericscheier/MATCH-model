@@ -369,7 +369,7 @@ def generate_inputs(model_workspace):
     if solver == "cbc":
         print("Copying CBC solver to model run directory...")
         # copy the cbc solver to the model workspace
-        shutil.copy("../../cbc.exe", model_workspace)
+        shutil.copy("../../cbc", model_workspace)
 
     # create the scenario folders in the input and output directories
     try:
@@ -1049,7 +1049,8 @@ def generate_inputs(model_workspace):
                 cambium_regions.to_csv(input_dir / "cambium_regions.csv", index=False)
 
             # summary_report.ipynb
-            shutil.copy("../reporting/summary_report.ipynb", input_dir)
+            shutil.copy("../../MATCH-model/match_model/reporting/summary_report.ipynb", input_dir)
+            #shutil.copy("../reporting/summary_report.ipynb", input_dir)
 
             # generator set name
             set_name = open(input_dir / "gen_set.txt", "w+")

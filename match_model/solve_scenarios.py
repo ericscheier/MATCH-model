@@ -243,9 +243,9 @@ def main(args=None):
             capacity_df.to_csv("summary_reports/portfolio_comparison.csv", index=False)
 
             # delete all of the individual files
-            for s in scenarios:
-                summary_file = f"summary_reports/scenario_summary_{s}.csv"
-                os.remove(summary_file)
+            #for s in scenarios:
+            #    summary_file = f"summary_reports/scenario_summary_{s}.csv"
+            #    os.remove(summary_file)
 
 
 def scenarios_to_run():
